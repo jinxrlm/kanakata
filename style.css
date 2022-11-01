@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+    font-family:Roboto;
+}
+
+.jp-lbg, .jp-lbg a {
+    color: #fff;
+    background-color:#20d3c2;
+}
+
+.jp-lbg .vr {
+    display:inline-block;
+    opacity:100%;
+}
+
+.jp-socials a {
+    float:left;
+    padding-right:5px;
+}
+
+.jp-col a:hover, .jp-col .active {
+    color:#31419a !important;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon,
+.navbar-toggler-icon:focus {
+    border:1px none;
+    outline: none;
+    box-shadow: none;
+}
