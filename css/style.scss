@@ -1,5 +1,9 @@
+/* file import */
+@import 'variables';
+@import 'mixins';
+@import 'card';
+
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(./dist/jpsass.css);
 
 body {
     font-family:Roboto;
@@ -59,6 +63,16 @@ body {
 .jp-usermenu {
     text-align:right;
 }
+
+  @media only screen and (max-width: 992px) {
+    .jp-usermenu {
+        position:relative;
+        top:-78px;
+    }
+    input::placeholder {
+        display:none;
+    }
+  }
 
 .navbar-toggler,
 .navbar-toggler:focus,
