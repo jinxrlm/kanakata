@@ -11,19 +11,33 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid justify-content-center jp-lbg">
+        <div class="container-fluid justify-content-center">
             <header class="container-fluid col-12 col-lg-8">
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <i class="fa-solid fa-bars jp-lbg"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav">
-                        <li class="jp-col nav-item">
-                        <a href="#" class="nav-link">ENG <i class="fa-regular fa-chevron-down"></i></a>
-                        </li>   
-                        <li class="jp-col nav-item">
-                        <a href="#" class="nav-link">USD <i class="fa-regular fa-chevron-down"></i></a>
-                        </li>
+                        <li class="jp-col nav-item dropdown">
+                                <a class="btn pt-2" href="#" role="button" data-toggle="tab" data-bs-toggle="dropdown" aria-expanded="false">
+                                  ENG <i class="fa fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu m-0 jp-ddbg">
+                                  <li><a class="dropdown-item" href="#">English</a></li>
+                                  <li><a class="dropdown-item" href="#">German</a></li>
+                                  <li><a class="dropdown-item" href="#">Swedish</a></li>
+                                </ul>
+                        </li> 
+                        <li class="jp-col nav-item dropdown">
+                            <a class="btn pt-2" href="#" role="button" data-toggle="tab" data-bs-toggle="dropdown" aria-expanded="false">
+                              USD <i class="fa fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu m-0 jp-ddbg">
+                                <li><a class="dropdown-item" href="#">$ US Dollar</a></li>
+                                <li><a class="dropdown-item" href="#">€ Euro</a></li>
+                                <li><a class="dropdown-item" href="#">SEK Swedish Krona</a></li>
+                            </ul>
+                    </li> 
                         <div class="vr d-none d-xl-inline"></div>
                     </ul>
                     <ul class="navbar-nav ms-auto">              	
@@ -45,11 +59,11 @@
                         <div class="vr d-none d-xl-inline"></div>
                         <li class="jp-col nav-item">
                             <div class="jp-socials">
-                            <a href="#" class="nav-link"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="nav-link"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="nav-link"><i class="fa fa-instagram"></i></a>
-                            <a href="#" class="nav-link"><i class="fa fa-pinterest"></i></a>
-                            <a href="#" class="nav-link"><i class="fa fa-youtube"></i></a>
+                            <a href="#" class="nav-link p-3 p-lg-2"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="nav-link p-3 p-lg-2"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="nav-link p-3 p-lg-2"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="nav-link p-3 p-lg-2"><i class="fa fa-pinterest"></i></a>
+                            <a href="#" class="nav-link p-3 p-lg-2"><i class="fa fa-youtube"></i></a>
                             </div>
                          </li>
                     </ul>
@@ -59,28 +73,112 @@
     </nav>
     <div class="container col-12 col-md-8 px-4 justify-content-center">
         <div id="main" class="row align-items-center my-2 my-md-4">
-            <div class="col-12 col-lg-3 my-3 my-lg-0">
+            <div class="col-3 my-3 my-lg-0">
                 <img src="Logo.svg">
             </div>
-            <div class="col-12 col-lg-6">
-                <div class="input-group">
-                    <input type="text" class="form-control rounded-pill jp-inp" placeholder="Search products..."/>
-                    <span class="input-group-append">
-                        <button class="btn jp-cat">Categories</button>
-                        <button class="btn dropdown-toggle jp-dropd" data-toggle="dropdown">
-                        </button>
-                        <ul class="dropdown-menu">
-                          <!-- dropdown menu links -->
-                        </ul>
-                        <button type='submit' class="btn rounded-pill jp-btn"><i class="fa fa-search"></i></button>
-                    </span>
-                  </div>
+            <div class="col jp-cattop">
+                <input type="text" class="rounded-pill jp-inp col" placeholder="Search products..."/>
+                <select class="jp-cat" aria-label="categories">
+                    <option selected>Categories</option>
+                    <option value="clothes">Clothes</option>
+                    <option value="2">Accessories</option>
+                    <option value="3">Health & Beauty</option>
+                </select>
+                <button type='submit' class="btn rounded-pill jp-btn"><i class="fa fa-search"></i></button>
             </div>               
-            <div class="col-12 col-lg-3 jp-usermenu">
-                My account 1 2 3 $0.00
+            <div class="col jp-usermenu">
+                <a href="#" class="btn jp-um-link position-relative p-1">
+                    <i class="fa-regular fa-user"></i> My account 
+                </a>
+                <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="favorites">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+                <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="compare items">
+                    <i class="fa-regular fa-scale-balanced">
+                        <span class="position-absolute top-0 translate-middle badge rounded-pill">
+                            0
+                            <span class="visually-hidden">compare items</span>
+                        </span>
+                    </i>
+                </a>
+                <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="shopping cart">
+                    <i class="fa-regular fa-cart-shopping">
+                        <span class="position-absolute top-0 translate-middle badge rounded-pill">
+                            0
+                            <span class="visually-hidden">shopping cart</span>
+                        </span>
+                    </i> $0.00
+                </a>
             </div>
+        </div>
+    </div>
+    <div class="container me-5 jp-hlcont">
+        <div class="row justify-content-center">
+            <div class="col col-5 col-lg-4 text-center jp-movehl">
+                <span class="jp-headline1">Shopping is</span>
+                <span class="jp-headline2">more fun</span>
+                <button class="btn rounded-pill jp-hl-btn">
+                    Shop now
+                </button>
+            </div>
+            <div class="col col-6 col-lg-4 jp-models">
+                <img class="jp-modelspic" src="images/banner-modelhfchfc.png">
+            </div>
+        </div>
+    </div>
+    <div class="container col-9 justify-content-center jp-options">
+        <div class="row">
+        <div id="card1" class="card col-12 col-lg mx-2 jp-card">
+            <div class="card-horizontal">
+                <div class="img-square-wrapper">
+                    <img class="greenpic" src="images/option1.svg" alt="Card image cap">
+                    <img class="whitepic" src="images/option1w.svg" alt="Card image cap">
+                    </div>
+                <div class="card-body">
+                <h4 class="card-title">Free shipping</h4>
+                <p class="card-text">For national customers we provide free shipping</p>
+                </div>
+            </div>
+        </div>
+        <div id="card2" class="card col-12 col-lg mx-2 jp-card">
+            <div class="card-horizontal">
+                <div class="img-square-wrapper">
+                <img class="greenpic" src="images/option2.svg" alt="Card image cap">
+                <img class="whitepic" src="images/option2w.svg" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">24/7 support</h4>
+                    <p class="card-text">We are available 24 hours a day for any inquiry</p>
+                </div>
+            </div>
+        </div>
+        <div id="card3" class="card col-12 col-lg mx-2 jp-card">
+            <div class="card-horizontal">
+                <div class="img-square-wrapper">
+                    <img class="greenpic" src="images/option3.svg" alt="Card image cap">
+                    <img class="whitepic" src="images/option3w.svg" alt="Card image cap">
+                    </div>
+                <div class="card-body">
+                <h4 class="card-title">Online payment</h4>
+                <p class="card-text">Quick and easy online payment with multiple choices</p>
+                </div>
+            </div>
+        </div>
+        <div id="card4" class="card col-12 col-lg mx-2 jp-card">
+            <div class="card-horizontal">
+                <div class="img-square-wrapper">
+                    <img class="greenpic" src="images/option4.svg" alt="Card image cap">
+                    <img class="whitepic" src="images/option4w.svg" alt="Card image cap">
+                    </div>
+                <div class="card-body">
+                <h4 class="card-title">Fast delivery</h4>
+                <p class="card-text">Orders placed before 3 pm are shipped from us the same day</p>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="jpscript.js"></script>
 </html>

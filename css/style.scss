@@ -4,19 +4,73 @@
 @import 'card';
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;900);
 
 body {
     font-family:Roboto;
+    background-image: linear-gradient(140deg, #fff, #ffff3f);
+}
+
+.navbar {
+    padding:0;
+    background-color: rgba(0, 127, 95, 0.2) !important;
+}
+
+.navbar a, .navbar a:hover {
+    font-size: 0.8rem;
+    border-radius : 0% !important;
+    border:none;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active, .nav-link.active {
+    background-color: rgba(0 127 95 / 1) !important;
+    color:rgba(238 239 32 / 1) !important;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.navbar > li > a, .navbar > li > a:hover {
+    font-size: 0.8rem;
+    position:relative;
+    top:1px;
+    border: none !important;
+}
+
+.navbar a:hover, .navbar a:active {
+    background-color: #007f5f !important;
+}
+
+a:hover {
+    color:#55a630;
+}
+
+.dropdown-menu {
+    border:none;
+    margin-top:0;
+    padding-bottom:8px;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255 255 255 / 0.1) !important;
 }
 
 .jp-lbg, .jp-lbg a {
     color: #fff;
-    background-color:#20d3c2;
+    background-color:#55a630;
 }
 
-.jp-lbg .vr {
+.jp-ddbg {
+    color: #fff;
+    border-radius : 0% !important;
+    background-color: rgb(0 127 95) !important;
+}
+
+.navbar-nav .vr {
     display:inline-block;
-    opacity:100%;
+    opacity:0.1 !important;
+    width:1px;
 }
 
 .jp-socials a {
@@ -25,54 +79,260 @@ body {
 }
 
 .jp-col a:hover, .jp-col .active {
-    color:#31419a !important;
+    color:#eeef20 !important;
 }
 
 .input-group-append {
     position: absolute;
-    right: 0;
+    right: -2px;
 }
 
+.jp-inp, .jp-cat {
+    border-color:rgba(85, 166, 48, 100) !important;
+    border-width: 1px;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    z-index:0;
+    padding:0.5em;
+    height: 2.5em;
+    margin:0 !important;
+}   
+
 .jp-inp {
-    border-color:rgba(32, 211, 194, 100) !important;
-    padding-right:10rem;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    padding-left:1em;
+    margin-right:-5px !important;
+}
+
+.jp-inp::placeholder {
+    font-size: 0.8rem;
 }
 
 .jp-cat, .jp-cat:hover {
-    z-index: 10 !important;
-    border-left-color:#20d3c2;
+    z-index: 11 !important;
+    border-left-color:#55a630;
     border-left-style:solid;
     border-radius:0;
+    color: #007f5f;
 }
 
-.jp-dropd {
+.jp-catnb:hover {
+    background-color:#55a630;
+    display:inline-block;
+    padding:0 !important;
     margin:0 !important;
-    padding: 0 10px 0 0 !important;
-    z-index: 10 !important;
 }
 
+.jp-catnb:hover, .jp-catnb:hover > * {
+    color:#fff !important;
+}
+
+.jp-cattop {
+    margin:0 !important;
+    padding-right: 0px;
+    display: flex;
+    width:auto;
+}
 
 .jp-btn {
     border-top-left-radius : 0% !important;
     border-bottom-left-radius : 0% !important;
-    z-index: 10 !important;
-    background-color:#20d3c2;
+    z-index: 12 !important;
+    background-color:#55a630;
     color:#fff;
+    position:relative;
+    left:-2px !important;
+}
+
+.jp-btn:hover {
+    background-color: #fff;
+    border-style:solid;
+    border-color: #55a630;
+}
+
+.jp-ddstext a {
+    color: #55a630 !important;
 }
 
 .jp-usermenu {
     text-align:right;
 }
 
-  @media only screen and (max-width: 992px) {
+.jp-um-link {
+    text-decoration: none;
+    color:#007f5f;
+}
+
+.jp-um-link:hover {
+    background-color:#fff;
+}
+
+.badge {
+    font-size:0.5rem;
+    background-color: #55a630;
+    top:4px !important;
+}
+
+.jp-hlcont {
+    position:relative;
+    right:140px;
+}
+
+.jp-models {
+    position:relative;
+    top:-30px;
+    left:-80px;
+}
+
+.jp-movehl {
+    position:relative;
+    left:30px;
+    top:130px;
+    z-index:10;
+}
+
+
+.jp-headline1 {
+    font-size:5.3em;
+    color:#007f5f;
+    font-family:Cairo Play;
+    font-weight:400;
+    line-height: 1em;
+    display:block;
+}
+
+.jp-headline2 {
+    font-family:Cairo Play;
+    font-weight:900;
+    text-transform:uppercase;
+    color:#55a630;
+    font-size:5.5em;
+    line-height: 1em;
+    display:block;
+}
+
+.jp-hl-btn {
+    font-size:1em;
+    padding:2px 20px;
+    font-family:Cairo Play;
+    background-color: #fff;
+    z-index: 10;
+    line-height: 2em;
+}
+
+.jp-hl-btn:hover {
+    background-color:#55a630;
+    color:#fff;
+}
+
+.jp-models {
+    filter: drop-shadow(15px 50px 8px rgba(61, 41, 57, 0.4));
+}
+
+.jp-options {
+    position:relative !important;
+    top:-400px !important;
+}
+
+.jp-card {
+    border:rgba(85 166 48 / 60%) 1px solid;
+}
+
+.jp-card, .jp-card-sel {
+    background-color: #fff;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.jp-card-sel {
+    background-color: #55a630;
+}
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.img-square-wrapper {
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+.jp-card .greenpic {
+    display:inline;
+}
+.jp-card .whitepic {
+    display:none;
+}
+.jp-card-sel .greenpic {
+    display:none;
+}
+.jp-card-sel .whitepic {
+    display:inline;
+}
+
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #55a630;
+    opacity:100%;
+    border-bottom:rgba(85 166 48 / 60%) 1px solid;
+}
+
+.card-text {
+    font-size: 0.9em;
+    color: #007f5f;
+    opacity:100%;
+}
+
+.jp-card-sel .card-title, .jp-card-sel .card-text {
+    color: #fff !important;
+}
+
+.jp-card-sel .card-title {
+    opacity:60%;
+    border-bottom:rgba(255 255 255 / 60%) 1px solid;
+}
+
+@media only screen and (max-width: 992px) {
     .jp-usermenu {
         position:relative;
         top:-78px;
     }
-    input::placeholder {
-        display:none;
+    .jp-movehl {
+        position:relative;
+        left:20px;
+        top:90px;
+        z-index:10;
     }
-  }
+    .jp-headline1 {
+        font-size:2.3em;
+    }
+    .jp-headline2 {
+        font-size:4.8em;
+    }
+    .jp-models {
+        top:0px;
+    }
+    .jp-modelspic {
+        width:420px;
+        height: auto;
+    }
+    .jp-hlcont {
+        position:relative;
+        top:-20px;
+        right:auto;
+        overflow: hidden;
+    }
+    .jp-options {
+        top:-130px !important;
+    }
+    .jp-card, .jp-card-sel {
+        margin-bottom:20px !important;
+    }
+    
+}
 
 .navbar-toggler,
 .navbar-toggler:focus,
