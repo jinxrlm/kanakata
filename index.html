@@ -76,8 +76,8 @@
             <div class="col-3 my-3 my-lg-0">
                 <img src="Logo.svg">
             </div>
-            <div class="col jp-cattop">
-                <input type="text" class="rounded-pill jp-inp col" placeholder="Search products..."/>
+            <div class="jp-cattop col-12 col-lg-5">
+                <input type="text" class="form-control rounded-pill jp-inp" placeholder="Search products..."/>
                 <select class="jp-cat" aria-label="categories">
                     <option selected>Categories</option>
                     <option value="clothes">Clothes</option>
@@ -112,6 +112,45 @@
             </div>
         </div>
     </div>
+
+
+
+    <div class="container col-12 col-md-8 px-4 justify-content-center dropdown">
+        <div class="row">
+            <div class="d-none d-lg-inline col-3 btn catbut" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-list-tree pe-2"></i> Browse Categories</div>
+            <div class="container dropdown-menu catbox">
+                <div class="row">
+                    <div class="col" ><h3>Clothes</h3>
+                        <ul class="jp-cat-list">
+                            <li>Subitem 1</li>
+                            <li>Subitem 2</li>
+                            <li>Subitem 3</li>
+                            <li>Subitem 4</li>
+                        </ul>
+                    </div>
+                    <div class="col"><h3>Accessories</h3>
+                        <ul class="jp-cat-list">
+                            <li>Subitem 1</li>
+                            <li>Subitem 2</li>
+                            <li>Subitem 3</li>
+                            <li>Subitem 4</li>
+                        </ul>
+                    </div>
+                    <div class="col"><h3>Health & Beauty</h3>
+                        <ul class="jp-cat-list">
+                            <li>Subitem 1</li>
+                            <li>Subitem 2</li>
+                            <li>Subitem 3</li>
+                            <li>Subitem 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="container me-5 jp-hlcont">
         <div class="row justify-content-center">
             <div class="col col-5 col-lg-4 text-center jp-movehl">
@@ -122,11 +161,11 @@
                 </button>
             </div>
             <div class="col col-6 col-lg-4 jp-models">
-                <img class="jp-modelspic" src="images/banner-modelhfchfc.png">
+                    <img class="jp-modelspic" src="images/banner-modelhfchfc.png">
             </div>
         </div>
     </div>
-    <div class="container col-9 justify-content-center jp-options">
+    <div class="container col-10 col-lg-8 d-flex align-items-center justify-content-center jp-options">
         <div class="row">
         <div id="card1" class="card col-12 col-lg mx-2 jp-card">
             <div class="card-horizontal">
@@ -178,6 +217,43 @@
         </div>
         </div>
     </div>
+<div class="jpg-fw">
+
+    <div class="row justify-content-center">
+        <div class="jpg-toptext col-8">
+            <h2 class="jpg-desctitel">Shop by <span>category</span></h2>
+            <span class="jpg-desctext">We always try to give you the best product in a fast and reliable way</span>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div id="jpg-wrapper" class="col-8">
+            <div class="jpg-block">
+                <span>Men</span>
+            </div>
+            <div class="jpg-block jpg-wide1">
+                <span>Women</span>
+            </div>
+            <div class="jpg-block jpg-big1">
+                <span>Kids</span>
+            </div>
+            <div class="jpg-block jpg-big2">
+                <span>Shoes</span>
+            </div>
+            <div class="jpg-block">
+                <span>Hats</span>
+            </div>
+            <div class="jpg-block jpg-wide2">
+                <span>Watches</span>
+            </div>
+            <div class="jpg-block">
+                <span>Sunglasses<br/>18 products</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="jpscript.js"></script>
