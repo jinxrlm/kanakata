@@ -13,3 +13,11 @@ var myInterval = setInterval(function() {
     document.getElementById(cards[(++cur_card) % cards.length]).classList.toggle("jp-card-sel");
 }, 3000);
 }
+
+function doMode(chon,choff) {
+    document.getElementById(chon).classList.toggle('d-none');
+    document.getElementById(choff).classList.toggle('d-none');
+    document.getElementById('modellight').classList.toggle('d-none');
+    document.getElementById('modeldark').classList.toggle('d-none');
+    document.body.classList.toggle('dark');
+}

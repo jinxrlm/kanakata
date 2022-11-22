@@ -8,12 +8,13 @@
 
 body {
     font-family:Roboto;
-    background-image: linear-gradient(140deg, #fff, #ffff3f);
+    background-image: linear-gradient(140deg, #ffff8e, #a9d992);
 }
 
 .navbar {
     padding:0;
     background-color: rgba(0, 127, 95, 0.2) !important;
+    z-index:2;
 }
 
 .navbar a, .navbar a:hover {
@@ -245,7 +246,8 @@ a:hover {
     font-family:Cairo Play;
     font-weight:900;
     text-transform:uppercase;
-    color:#55a630;
+    color:#fff;
+    text-shadow: 1px 1px 2px rgba(0, 127, 95, 0.5);
     font-size:5.4em;
     line-height: 1em;
     display:block;
@@ -361,10 +363,11 @@ a:hover {
     display: block;
     position:relative;
     z-index: 12 !important;
-    background-color: #a9d992;
+    background-image: linear-gradient(140deg, #ffff8e, #a9d992);
     padding-top:2em;
     justify-content: center !important;
     font-family:Cairo Play;
+    overflow:hidden;
 }
 
 
@@ -379,9 +382,11 @@ a:hover {
     font-weight: 900;
     color:#007f5f;
     margin-bottom:0;
+    text-transform: uppercase;
 }
 .jpg-desctitel span {
     color:#fff;
+    text-shadow: 1px 1px 2px rgba(0, 127, 95, 0.3);
 }
 
 .jpg-desctext {
@@ -389,16 +394,92 @@ a:hover {
 }
 
 #jpg-wrapper {
-    display: grid !important;                            /* 1 */
-    grid-template-columns: none !important;   /* 2 */
-    grid-auto-rows: 11em !important;                     /* 3 */
-    grid-gap: 1em !important;                           /* 4 */
+    display: grid !important;
+    grid-template-columns: none !important;
+    grid-auto-rows: 11em !important;
+    grid-gap: 1em !important;
     margin-bottom: 4em;
+    grid-template-columns: repeat();
+  }
+
+  #jpg-wrapper:hover {
+    cursor: pointer;
   }
 
 #jpg-wrapper div {
     position:relative;
+    border-radius: 5px;
+    overflow:hidden;
 }
+
+#jpg-pic1 {
+    background: #{$picsol},
+    url(#{$picm1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic2 {
+    background: #{$picsol},
+    url(#{$pick1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic3 {
+    background: #{$picsol},
+    url(#{$picw1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic4 {
+    background: #{$picsol},
+    url(#{$pics1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic5 {
+    background: #{$picsol},
+    url(#{$pich1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic6 {
+    background: #{$picsol},
+    url(#{$picwa}) !important;
+    background-size:cover !important;
+}
+#jpg-pic7 {
+    background: #{$picsol},
+    url(#{$picsg}) !important;
+    background-size:cover !important;
+}
+#jpg-pic1:hover {
+    background: url(#{$picm1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic2:hover {
+    background: url(#{$pick1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic3:hover {
+    background: url(#{$picw1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic4:hover {
+    background: url(#{$pics1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic5:hover {
+    background: url(#{$pich1}) !important;
+    background-size:cover !important;
+}
+#jpg-pic6:hover {
+    background: url(#{$picwa}) !important;
+    background-size:cover !important;
+}
+#jpg-pic7:hover {
+    background: url(#{$picsg}) !important;
+    background-size:cover !important;
+}
+
+#jpg-wrapper div:hover {
+    background-blend-mode:normal;
+}
+
 
 #jpg-wrapper div span {
     display:block;
@@ -411,27 +492,23 @@ a:hover {
 }
 
   .jpg-wide1 {
-    grid-row: 1 / 2 !important;                          /* 6 */
-    grid-column: 2 / 4 !important;                       /* 6 */
+    grid-row: 1 / 2 !important;
+    grid-column: 2 / span 2 !important;
   }
   
   .jpg-wide2 {
-    grid-row: 3 / 4 !important;                          /* 6 */
-    grid-column: 4 / 6 !important;                       /* 6 */
+    grid-row: 3 / 4 !important;
+    grid-column: 4 / span 2 !important;
   }
   
   .jpg-big1 {
-    grid-row: 1 / 3 !important;                          /* 6 */
-    grid-column: 4 / 6 !important;                       /* 6 */
+    grid-row: 1 / span 2 !important;
+    grid-column: 4 / span 2 !important;
   }
 
   .jpg-big2 {
-    grid-row: 2 / 4 !important;                          /* 6 */
-    grid-column: 1 / 3 !important;                       /* 6 */
-  }
-
-  .jpg-block {
-    background-color: #55a630;
+    grid-row: 2 / span 2 !important;
+    grid-column: 1 / span 2 !important;
   }
 
 
@@ -514,4 +591,14 @@ a:hover {
     border:1px none;
     outline: none;
     box-shadow: none;
+}
+
+
+.dark {
+    background-color: #000 !important;
+    background-image: linear-gradient(140deg, #ffff8e1c, #a9d9923c);
+    color:#fff;
+}
+.dark a {
+    color: #fff;
 }

@@ -66,49 +66,56 @@
                             <a href="#" class="nav-link p-3 p-lg-2"><i class="fa fa-youtube"></i></a>
                             </div>
                          </li>
+                         <div class="vr d-none d-xl-inline"></div>
+                         <li class="jp-col nav-item">
+                            <a id="dmlight" href="javascript:doMode('dmdark','dmlight');" class="nav-link"><i class="fa-solid fa-lightbulb-on"></i></a>
+                            <a id="dmdark" href="javascript:doMode('dmlight','dmdark');" class="nav-link d-none"><i class="fa-solid fa-lightbulb-slash"></i></a>
+                        </li> 
                     </ul>
                 </div>
             </header>
         </div>
     </nav>
-    <div class="container col-12 col-md-8 px-4 justify-content-center">
-        <div id="main" class="row align-items-center my-2 my-md-4">
-            <div class="col-3 my-3 my-lg-0">
-                <img src="Logo.svg">
-            </div>
-            <div class="jp-cattop col-12 col-lg-5">
-                <input type="text" class="form-control rounded-pill jp-inp" placeholder="Search products..."/>
-                <select class="jp-cat" aria-label="categories">
-                    <option selected>Categories</option>
-                    <option value="clothes">Clothes</option>
-                    <option value="2">Accessories</option>
-                    <option value="3">Health & Beauty</option>
-                </select>
-                <button type='submit' class="btn rounded-pill jp-btn"><i class="fa fa-search"></i></button>
-            </div>               
-            <div class="col jp-usermenu">
-                <a href="#" class="btn jp-um-link position-relative p-1">
-                    <i class="fa-regular fa-user"></i> My account 
-                </a>
-                <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="favorites">
-                    <i class="fa-regular fa-heart"></i>
-                </a>
-                <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="compare items">
-                    <i class="fa-regular fa-scale-balanced">
-                        <span class="position-absolute top-0 translate-middle badge rounded-pill">
-                            0
-                            <span class="visually-hidden">compare items</span>
-                        </span>
-                    </i>
-                </a>
-                <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="shopping cart">
-                    <i class="fa-regular fa-cart-shopping">
-                        <span class="position-absolute top-0 translate-middle badge rounded-pill">
-                            0
-                            <span class="visually-hidden">shopping cart</span>
-                        </span>
-                    </i> $0.00
-                </a>
+    <div class="topdiv">
+        <div class="container col-12 col-md-8 px-4 justify-content-center">
+            <div id="main" class="row align-items-center my-2 my-md-4">
+                <div class="col-3 my-3 my-lg-0">
+                    <img src="Logo.svg">
+                </div>
+                <div class="jp-cattop col-12 col-lg-5">
+                    <input type="text" class="form-control rounded-pill jp-inp" placeholder="Search products..."/>
+                    <select class="jp-cat" aria-label="categories">
+                        <option selected>Categories</option>
+                        <option value="clothes">Clothes</option>
+                        <option value="2">Accessories</option>
+                        <option value="3">Health & Beauty</option>
+                    </select>
+                    <button type='submit' class="btn rounded-pill jp-btn"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="col jp-usermenu">
+                    <a href="#" class="btn jp-um-link position-relative p-1">
+                        <i class="fa-regular fa-user"></i> My account
+                    </a>
+                    <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="favorites">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="compare items">
+                        <i class="fa-regular fa-scale-balanced">
+                            <span class="position-absolute top-0 translate-middle badge rounded-pill">
+                                0
+                                <span class="visually-hidden">compare items</span>
+                            </span>
+                        </i>
+                    </a>
+                    <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="shopping cart">
+                        <i class="fa-regular fa-cart-shopping">
+                            <span class="position-absolute top-0 translate-middle badge rounded-pill">
+                                0
+                                <span class="visually-hidden">shopping cart</span>
+                            </span>
+                        </i> $0.00
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -161,7 +168,8 @@
                 </button>
             </div>
             <div class="col col-6 col-lg-4 jp-models">
-                    <img class="jp-modelspic" src="images/banner-modelhfchfc.png">
+                    <img id="modellight" class="jp-modelspic" src="images/banner-modelhfchfc.png">
+                    <img id="modeldark" class="jp-modelspic d-none" style="width:700px;margin-top:-80px;z-index:-1;" src="images/bbg2.png">
             </div>
         </div>
     </div>
@@ -219,7 +227,7 @@
     </div>
 <div class="jpg-fw">
 
-    <div class="row justify-content-center">
+    <div class="col-12 row justify-content-center">
         <div class="jpg-toptext col-8">
             <h2 class="jpg-desctitel">Shop by <span>category</span></h2>
             <span class="jpg-desctext">We always try to give you the best product in a fast and reliable way</span>
@@ -228,25 +236,25 @@
 
     <div class="row justify-content-center">
         <div id="jpg-wrapper" class="col-8">
-            <div class="jpg-block">
+            <div class="jpg-block" id="jpg-pic1">
                 <span>Men</span>
             </div>
-            <div class="jpg-block jpg-wide1">
-                <span>Women</span>
-            </div>
-            <div class="jpg-block jpg-big1">
+            <div class="jpg-block jpg-wide1" id="jpg-pic2"">
                 <span>Kids</span>
             </div>
-            <div class="jpg-block jpg-big2">
+            <div class="jpg-block jpg-big1" id="jpg-pic3">
+                <span>Women</span>
+            </div>
+            <div class="jpg-block jpg-big2" id="jpg-pic4">
                 <span>Shoes</span>
             </div>
-            <div class="jpg-block">
+            <div class="jpg-block" id="jpg-pic5">
                 <span>Hats</span>
             </div>
-            <div class="jpg-block jpg-wide2">
+            <div class="jpg-block jpg-wide2" id="jpg-pic6">
                 <span>Watches</span>
             </div>
-            <div class="jpg-block">
+            <div class="jpg-block" id="jpg-pic7">
                 <span>Sunglasses<br/>18 products</span>
             </div>
         </div>
