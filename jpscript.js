@@ -19,5 +19,27 @@ function doMode(chon,choff) {
     document.getElementById(choff).classList.toggle('d-none');
     document.getElementById('modellight').classList.toggle('d-none');
     document.getElementById('modeldark').classList.toggle('d-none');
+    document.getElementById('logow').classList.toggle('d-none');
+    document.getElementById('logob').classList.toggle('d-none');
     document.body.classList.toggle('dark');
 }
+
+// document.getElementById('#myCarousel').on('slide.bs.carousel', function onSlide (ev) {
+//     var id = ev.relatedTarget.id;
+//     switch (id) {
+//         case "jpc1":
+//             ev.relatedTarget.classList.toggle('s400');
+//         break;
+//         case "jpc2":
+//             ev.relatedTarget.classList.toggle('s400');
+//         break;
+//         case "jpc3":
+//             ev.relatedTarget.classList.toggle('s400');
+//         break;
+//         case "jpc3":
+//             ev.relatedTarget.classList.toggle('s400');
+//         break;
+//         default:
+//         //the id is none of the above
+//     }
+//   })

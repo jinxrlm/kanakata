@@ -434,41 +434,6 @@ a:hover {
   background-size: cover !important;
 }
 
-#jpg-pic1:hover {
-  background: url(/kanakata/images/man1.jpg) !important;
-  background-size: cover !important;
-}
-
-#jpg-pic2:hover {
-  background: url(/kanakata/images/kids1.jpg) !important;
-  background-size: cover !important;
-}
-
-#jpg-pic3:hover {
-  background: url(/kanakata/images/woman1.gif) !important;
-  background-size: cover !important;
-}
-
-#jpg-pic4:hover {
-  background: url(/kanakata/images/shoes1.jpg) !important;
-  background-size: cover !important;
-}
-
-#jpg-pic5:hover {
-  background: url(/kanakata/images/hats1.jpg) !important;
-  background-size: cover !important;
-}
-
-#jpg-pic6:hover {
-  background: url(/kanakata/images/watch1.jpg) !important;
-  background-size: cover !important;
-}
-
-#jpg-pic7:hover {
-  background: url(/kanakata/images/sungl1.jpg) !important;
-  background-size: cover !important;
-}
-
 #jpg-wrapper div:hover {
   background-blend-mode: normal;
 }
@@ -501,6 +466,136 @@ a:hover {
 .jpg-big2 {
   grid-row: 2/span 2 !important;
   grid-column: 1/span 2 !important;
+}
+
+.jp-car-row {
+  text-align: center;
+  justify-content: center;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  text-decoration: none;
+  font-size: 3em;
+}
+
+.jp-slide {
+  height: 500px;
+  width: 524px;
+  background: none;
+}
+
+.jp-car {
+  height: 500px;
+  background: none;
+  border: none;
+}
+
+.jp-car img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  border-radius: 0.5em;
+}
+
+#jpc1::before, #jpc1::after, #jpc2::before, #jpc2::after, #jpc3::before, #jpc3::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  height: 400px;
+  width: 400px;
+  display: block;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+#jpc1, #jpc2, #jpc3 {
+  z-index: 10;
+}
+
+#jpc1:not(.active.carousel-item-end)::before {
+  background: url(/kanakata/images/lapic3.jpg);
+  background-size: cover;
+  left: -450px;
+}
+
+#jpc1:not(.active.carousel-item-start)::after {
+  background: url(/kanakata/images/lapic2.jpg);
+  background-size: cover;
+  left: 550px;
+}
+
+#jpc2:not(.active.carousel-item-end).active::before {
+  background: url(/kanakata/images/lapic1.jpg);
+  background-size: cover;
+  left: -450px;
+}
+
+#jpc2:not(.active.carousel-item-start)::after {
+  background: url(/kanakata/images/lapic3.jpg);
+  background-size: cover;
+  left: 550px;
+}
+
+#jpc3:not(.active.carousel-item-end).active::before {
+  background: url(/kanakata/images/lapic2.jpg);
+  background-size: cover;
+  left: -450px;
+}
+
+#jpc3:not(.active.carousel-item-start)::after {
+  background: url(/kanakata/images/lapic1.jpg);
+  background-size: cover;
+  left: 550px;
+}
+
+.carousel-item {
+  opacity: 1;
+}
+
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+  transform: translateX(100%) scale(0.8);
+  opacity: 0.2;
+  transition-property: opacity, transform;
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+  transform: translateX(-100%) scale(0.8);
+  opacity: 0.2;
+  transition-property: opacity, transform;
+}
+
+#jp-car-ofl {
+  overflow: visible;
+}
+
+.carousel-control-next, .carousel-control-prev, .carousel-indicators {
+  filter: invert(100%);
+}
+
+.dark .carousel-control-next, .dark .carousel-control-prev, .dark.carousel-indicators {
+  filter: none;
+}
+
+.cartext {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(85, 166, 48);
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  padding: 4px 10px 8px 20px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0 0.5em 0 0.5em;
+}
+
+.jp-car:hover .cartext, .jp-car.hover .cartext {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(85, 166, 48, 0.7);
+  border-radius: 0.5em;
 }
 
 @media only screen and (max-width: 992px) {
@@ -578,12 +673,155 @@ a:hover {
   box-shadow: none;
 }
 
+/* DARK */
 .dark {
   background-color: #000 !important;
-  background-image: linear-gradient(140deg, rgba(255, 255, 142, 0.1098039216), rgba(169, 217, 146, 0.2352941176));
+  background-image: linear-gradient(140deg, #313628, #0d0e01);
   color: #fff;
 }
 
 .dark a {
   color: #fff;
+}
+
+.dark .jp-card {
+  background-color: rgba(0, 127, 95, 0.5);
+}
+
+.dark .jp-card-sel {
+  background-color: #000;
+}
+
+.dark .jp-cat, .dark .form-control, .dark .catbox, .dark .catbut {
+  background-color: #000 !important;
+  color: #fff;
+}
+
+.dark .navbar {
+  background-color: rgba(0, 127, 95, 0.4) !important;
+}
+
+.dark .jp-inp, .jp-cat {
+  border-color: #007f5f !important;
+}
+
+.dark .jp-cat, .jp-cat:hover {
+  border-left-color: #007f5f;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .jp-catnb:hover {
+  background-color: #55a630;
+}
+
+.dark .jp-btn {
+  background-color: #007f5f;
+  color: #fff;
+}
+
+.dark .jp-btn:hover {
+  background-color: #fff;
+  border-color: #007f5f;
+  color: #000;
+}
+
+.dark .catbut {
+  border-color: #007f5f;
+}
+
+.jp-inp::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.jp-inp:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.jp-inp::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .jpg-fw {
+  background-image: linear-gradient(140deg, #313628, #1d1e11);
+}
+
+.dark .jp-models {
+  filter: drop-shadow(0px 0px 55px rgba(255, 255, 255, 0.2));
+}
+
+.dark #jpg-pic1 {
+  border: #007f5f solid 1px;
+  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/man1.jpg) !important;
+  background-size: cover !important;
+}
+
+.dark #jpg-pic2 {
+  border: #007f5f solid 1px;
+  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/kids1.jpg) !important;
+  background-size: cover !important;
+}
+
+.dark #jpg-pic3 {
+  border: #007f5f solid 1px;
+  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/woman1.gif) !important;
+  background-size: cover !important;
+}
+
+.dark #jpg-pic4 {
+  border: #007f5f solid 1px;
+  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/shoes1.jpg) !important;
+  background-size: cover !important;
+}
+
+.dark #jpg-pic5 {
+  border: #007f5f solid 1px;
+  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/hats1.jpg) !important;
+  background-size: cover !important;
+}
+
+.dark #jpg-pic6 {
+  border: #007f5f solid 1px;
+  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/watch1.jpg) !important;
+  background-size: cover !important;
+}
+
+.dark #jpg-pic7 {
+  border: #007f5f solid 1px;
+  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/sungl1.jpg) !important;
+  background-size: cover !important;
+}
+
+#jpg-pic1:hover {
+  background: url(/kanakata/images/man1.jpg) !important;
+  background-size: cover !important;
+}
+
+#jpg-pic2:hover {
+  background: url(/kanakata/images/kids1.jpg) !important;
+  background-size: cover !important;
+}
+
+#jpg-pic3:hover {
+  background: url(/kanakata/images/woman1.gif) !important;
+  background-size: cover !important;
+}
+
+#jpg-pic4:hover {
+  background: url(/kanakata/images/shoes1.jpg) !important;
+  background-size: cover !important;
+}
+
+#jpg-pic5:hover {
+  background: url(/kanakata/images/hats1.jpg) !important;
+  background-size: cover !important;
+}
+
+#jpg-pic6:hover {
+  background: url(/kanakata/images/watch1.jpg) !important;
+  background-size: cover !important;
+}
+
+#jpg-pic7:hover {
+  background: url(/kanakata/images/sungl1.jpg) !important;
+  background-size: cover !important;
 }/*# sourceMappingURL=style.css.map */
