@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""> 
+    <title></title>
+</head>
+<body>
+    <svg id='svgdiv' viewBox="0 0 300 300">
+
+            <defs>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@900&display=swap');
+                </style>
+            </defs>
+            <text x="20" y="50" font-family="Titillium Web">text</text>
+        
+        <filter id="f1" x="0" y="0">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+        </filter>
+        <filter id="f2"  color-interpolation-filters="sRGB">
+            <feComponentTransfer>
+                <feFuncR type="linear" slope="5" intercept="-1"></feFuncR>
+                <feFuncG type="linear" slope="5" intercept="-1"></feFuncG>
+                <feFuncB type="linear" slope="5" intercept="-1"></feFuncB>
+              </feComponentTransfer>
+        </filter>
+    </svg>
+    <script>
+
+    let viewportHeight = window.innerHeight;
+    let viewportWidth = window.innerWidth;
+
+        function RandInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+        }
+
+
+        const svg = document.querySelector('#svgdiv');
+
+        const radius = 200;
+        const wh = 100;
+
+        const newRect = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
+        newRect.setAttribute("x", "0");
+        newRect.setAttribute("y", "0");
+        newRect.setAttribute("width", viewportWidth);
+        newRect.setAttribute("height", viewportHeight);
+        newRect.setAttribute("fill", "#ffffff");
+        svg.appendChild(newRect);
+
+
+        var newText = document.createElementNS("http://www.w3.org/2000/svg","text");
+        newText.setAttribute("x",10);      
+        newText.setAttribute("y",60);
+        newText.setAttribute("style", "fill:black");
+        newText.setAttribute("font-family", "Titillium Web");
+        newText.setAttribute("font-size","68");
+        var txt = document.createTextNode("QUIX");
+        newText.appendChild(txt);
+        svg.appendChild(newText);
+
+        // Creating circle and appending it
+        // const circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+
+        // circle.setAttribute('cx', `${wh / 2}`);
+        // circle.setAttribute("cy", `${wh / 2}`);
+        // circle.setAttribute("r", `${radius / 2}`);
+        // circle.setAttribute("fill", "black");
+
+        // svg.appendChild(circle);
+
+        var startAr = Array(2,5,1,6,30,4,8,2,7,50,2,5,4,8,80,40,100);
+        var kMovX = 20;
+        var kMovY = 20;
+        for (k=0;k<900;k++) {
+        for (i=0;i<30;i++) {
+
+            const blob = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+
+            var blobAr = '';
+            nodeNumber = RandInt(3,9);
+            var span1 = 20;
+            var span2 = -10;
+            var span3 = -5;
+            var span4 = 10;
+            for (j=0;j<=nodeNumber;j++) {
+                blobAr += 's' + RandInt(span1/2,span2/2) + ',' + RandInt(span1,span2) + ' '+ RandInt(span3,span4) + ','+ RandInt(span3,span4);
+                span1 += (span1/20);
+                span2 += (span2/10);
+            }
+            blob.setAttribute("id", "bid" + i);
+
+            blob.setAttribute('d','M' + (RandInt(span1,span2)+startAr[i]+kMovX) + ',' + (RandInt(span1,span2)+startAr[i]+kMovY) + blobAr + 'Z');
+            blob.setAttribute("fill", "white");
+            blob.setAttribute("opacity", Math.random());
+            
+            var setScale = "scale("+(RandInt(1,16)*0.02)+")";
+            blob.setAttribute("transform", setScale);
+            
+            svg.appendChild(blob);
+
+            //svg.setAttribute("filter", "url(#f2)");
+        }
+        if (kMovX < viewportWidth*1.4) kMovX = kMovX + RandInt(30,70);
+        else {
+            kMovX = 20;
+            if (kMovY < viewportHeight*1.5) kMovY = kMovY + RandInt(20,60);
+        }
+    }
+    svg.setAttribute("filter", "url(#f1)");
+    //svg.setAttribute("filter", "url(#f2)");
+    </script>
+</body>
+</html>

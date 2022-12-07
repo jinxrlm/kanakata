@@ -1,8 +1,11 @@
 $enable-negative-margins: true;
 $enable-cssgrid: true;
 
-$picsol : "linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%)";
-$picsol2 : "linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%)";
+// $picsol : "linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%)";
+// $picsol2 : "linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%)";
+
+$picsol : "";
+$picsol2 : "";
 
 $picm1 :"/kanakata/images/man1.jpg";
 $pick1 :"/kanakata/images/kids1.jpg";
@@ -12,3 +15,4 @@ $pich1 :"/kanakata/images/hats1.jpg";
 $picsg :"/kanakata/images/sungl1.jpg";
 $picwa :"/kanakata/images/watch1.jpg";
 
+$carousel-transition-duration : "transition: transform 2s ease-in-out, opacity 2s ease-in-out";

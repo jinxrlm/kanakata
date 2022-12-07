@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="15 9 60 32">
+	<filter id='shadow' color-interpolation-filters="sRGB">
+    <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.5"/>
+  </filter>
+  <g filter="url(#shadow)">
+	<path d="m 20 10 q 0 0 50 0 q 0 5 3 10 t 0 10 t -3 10 c 0 0 0 0 -50 0 q 0 -5 -3 -10 t 0 -10 t 3 -10 z " fill="#fff" />
+	</g>
+</svg>

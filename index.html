@@ -80,8 +80,8 @@
         <div class="container col-12 col-md-8 px-4 justify-content-center">
             <div id="main" class="row align-items-center my-2 my-md-4">
                 <div class="col-3 my-3 my-lg-0">
-                    <img id="logow" src="images/Logo.svg">
-                    <img id="logob" class="d-none" src="images/Logob.svg">
+                    <img id="logow" class="jp-logo" src="images/quixb.png">
+                    <img id="logob" class="jp-logo d-none" src="images/quixw.png">
                 </div>
                 <div class="jp-cattop col-12 col-lg-5">
                     <input type="text" class="form-control rounded-pill jp-inp" placeholder="Search products..."/>
@@ -94,7 +94,7 @@
                     <button type='submit' class="btn rounded-pill jp-btn"><i class="fa fa-search"></i></button>
                 </div>
                 <div class="col jp-usermenu">
-                    <a href="#" class="btn jp-um-link position-relative p-1">
+                    <a href="account.html" class="btn jp-um-link position-relative p-1">
                         <i class="fa-regular fa-user"></i> My account
                     </a>
                     <a href="#" class="btn jp-um-link position-relative p-1" data-bs-toggle="tooltip" data-bs-title="favorites">
@@ -238,25 +238,32 @@
     <div class="row justify-content-center">
         <div id="jpg-wrapper" class="col-8">
             <div class="jpg-block" id="jpg-pic1">
-                <span>Men</span>
+                <span class="greentitl">Men</span>
+                <span class="greenol"></span>
             </div>
             <div class="jpg-block jpg-wide1" id="jpg-pic2"">
-                <span>Kids</span>
+                <span class="greentitl">Kids</span>
+                <span class="greenol"></span>
             </div>
             <div class="jpg-block jpg-big1" id="jpg-pic3">
-                <span>Women</span>
+                <span class="greentitl">Women</span>
+                <span class="greenol"></span>
             </div>
             <div class="jpg-block jpg-big2" id="jpg-pic4">
-                <span>Shoes</span>
+                <span class="greentitl">Shoes</span>
+                <span class="greenol"></span>
             </div>
             <div class="jpg-block" id="jpg-pic5">
-                <span>Hats</span>
+                <span class="greentitl">Hats</span>
+                <span class="greenol"></span>
             </div>
             <div class="jpg-block jpg-wide2" id="jpg-pic6">
-                <span>Watches</span>
+                <span class="greentitl">Watches</span>
+                <span class="greenol"></span>
             </div>
             <div class="jpg-block" id="jpg-pic7">
-                <span>Sunglasses<br/>18 products</span>
+                <span class="greentitl">Sunglasses<br/>18 products</span>
+                <span class="greenol"></span>
             </div>
         </div>
     </div>
@@ -274,7 +281,7 @@
     <div class="row jp-car-row col-12 justify-content-center mb-5">
 
         <div id="myCarousel" class="carousel slide jp-slide" data-bs-ride="carousel">
-            <ol class="carousel-indicators">
+            <ol class="carousel-indicators" style="bottom:-48px;">
               <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
               <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
               <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
@@ -282,28 +289,117 @@
             <div id ="jp-car-ofl" class="carousel-inner mb-5">
               <div id="jpc1" class="jp-car card carousel-item active">
                 <img src="/kanakata/images/lapic1.jpg"/>
-                <span class="cartext">Title 1</span>
+                <span class="cartext"><span class="cartitle">Women's Shirt "Diner Style"</span><i class="fa-solid fa-up-right-from-square"></i>
+                <div class="jp-car-boxtext">Cotton canvas chacket silk mixing classic quirky work wear primary colour. <span class="carsizes">Sizes: S-XL</span><span class="cardisc">$99.00</span><span class="carprice">$69.00</span></div>
+                <div class="jp-car-boxicons">
+                    <span class="biitem"><i class="fa-regular fa-magnifying-glass"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-heart"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-scale-balanced"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-cart-shopping"></i></span>
+                </div></span>
               </div>
               <div id="jpc2" class="jp-car card carousel-item">
                 <img src="/kanakata/images/lapic2.jpg"/>
-                <span class="cartext">Title 2</span>
+                <span class="circnew"><span>NEW</span></span>
+                <span class="cartext"><span class="cartitle">Women's Tracksuit "Domino"</span><i class="fa-solid fa-up-right-from-square"></i>
+                <div class="jp-car-boxtext">Best seller signature waist cut pockets cotton-mix navy blue tailoring elegant cashmere.<span class="carsizes">Sizes: XS-XL</span><span class="cardisc" style="letter-spacing:-0.04em;">$199.00</span><span class="carprice" style="letter-spacing:-0.04em;">$169.00</span></div>
+                <div class="jp-car-boxicons">
+                    <span class="biitem"><i class="fa-regular fa-magnifying-glass"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-heart"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-scale-balanced"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-cart-shopping"></i></span>
+                </div></span>
               </div>
               <div id="jpc3" class="jp-car card carousel-item">
                 <img src="/kanakata/images/lapic3.jpg"/>
-                <span class="cartext">Title 3</span>
+                <span class="circnew"><span>NEW</span></span>
+                <span class="cartext"><span class="cartitle">T-Shirt "Culprit"</span><i class="fa-solid fa-up-right-from-square"></i>
+                <div class="jp-car-boxtext">Crisp fresh iconic elegant timeless clean perfume neck straight sharp silhouette and dart detail.<span class="carsizes">Sizes: S-XXL</span><span class="cardisc">$79.00</span><span class="carprice">$49.00</span></div>
+                <div class="jp-car-boxicons">
+                    <span class="biitem"><i class="fa-regular fa-magnifying-glass"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-heart"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-scale-balanced"></i></span>
+                    <span class="biitem"><i class="fa-regular fa-cart-shopping"></i></span>
+                </div></span>
               </div>
             </div>
-            <a class="carousel-control-prev" style="margin:-20px 0 0 -50px;" href="#myCarousel" role="button" data-bs-slide="prev">
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
                 <i class="fa-solid fa-caret-left"></i>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" style="margin:-20px -50px 0 0;" href="#myCarousel" role="button" data-bs-slide="next">
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
                 <i class="fa-solid fa-caret-right"></i>
               <span class="sr-only">Next</span>
             </a>
           </div>
-
+    </div>
 </div>
+
+<div class="jpg-fw">
+
+    <div class="col-12 row justify-content-center">
+        <div class="jpg-toptext col-8">
+            <h2 class="jpg-desctitel">Flash <span>Sale</span></h2>
+            <span class="jpg-desctext">Up to 50% off!</span>
+        </div>
+    </div>
+
+    <div class="row jp-car-row col-12 justify-content-center mb-5">
+        <div class="col">
+            <span>
+                
+                <img class="cdimg" src="/kanakata/images/jagged_circle.svg" alt="Days">
+                <div class="cdown" id="cdD"></div>
+                <div class="cdtext">Days</div>
+            </span>
+            <span>
+                
+                <img class="cdimg" src="/kanakata/images/jagged_circle.svg" alt="Hours">
+                <div class="cdown" id="cdH"></div>
+                <div class="cdtext">Hours</div>
+            </span>
+            <span>
+                
+                <img class="cdimg" src="/kanakata/images/jagged_circle.svg" alt="Minutes">
+                <div class="cdown" id="cdM"></div>
+                <div class="cdtext">Minutes</div>
+            </span>
+            <span>
+                
+                <img class="cdimg" src="/kanakata/images/jagged_circle.svg" alt="Seconds">
+                <div class="cdown" id="cdS"></div>
+                <div class="cdtext">Seconds</div>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="container col-12 col-md-8 px-4 justify-content-center jp-footer">
+    <div class="row">
+        <div class="col">
+            <ul>
+                <li>About Us</li>
+                <li>Contact</li>
+                <li>Privacy & Policies</li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul>
+                <li>FAQ</li>
+                <li>Shipping & Returns</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul>
+                <li><img id="footimgw" class="footimg d-none" src="images/quixw.png"><img id="footimgb" class="footimg" src="images/quixb.png"></li>
+                <li>Copyright 2022 Quix Inc.</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="jpscript.js"></script>

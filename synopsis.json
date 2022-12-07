@@ -1,0 +1,53 @@
+{
+	"synopsis": [{
+		"part1": [{
+				"item": "A family "
+			},
+			{
+				"item": "A widowed man "
+			}
+		],
+		"part2": [{
+				"item": "moves to "
+			},
+			{
+				"item": "is stranded at "
+			}
+		],
+		"part3": [{
+				"item": "a remote "
+			},
+			{
+				"item": "an abandoned "
+			}
+		],
+		"part4": [{
+				"item": "shack "
+			},
+			{
+				"item": "cottage "
+			}
+		],
+		"part5": [{
+				"item": "in the middle of "
+			},
+			{
+				"item": "way out in "
+			}
+		],
+		"part6": [{
+				"item": "the wild woods"
+			},
+			{
+				"item": "the icy north"
+			}
+		],
+		"part7": [{
+				"item": "moves to"
+			},
+			{
+				"item": "are abandonded"
+			}
+		]
+	}]
+}

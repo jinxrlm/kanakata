@@ -1,9 +1,19 @@
 /* file import */
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;900);
+@import url(https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;900);
+@font-face {
+  font-family: "ODYWSS";
+  src: url("/kanakata/fonts/ODYWSS.ttf.woff") format("woff"), url("/kanakata/fonts/ODYWSS.ttf.svg#ODYWSS") format("svg"), url("/kanakata/fonts/ODYWSS.ttf.eot"), url("/kanakata/fonts/ODYWSS.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: Roboto;
   background-image: linear-gradient(140deg, #ffff8e, #a9d992);
+}
+
+.account {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), linear-gradient(140deg, #ffff8e, #a9d992);
 }
 
 .navbar {
@@ -237,14 +247,14 @@ a:hover {
 .jp-headline1 {
   font-size: 5.3em;
   color: #007f5f;
-  font-family: Cairo Play;
+  font-family: Titillium Web;
   font-weight: 400;
   line-height: 1em;
   display: block;
 }
 
 .jp-headline2 {
-  font-family: Cairo Play;
+  font-family: Titillium Web;
   font-weight: 900;
   text-transform: uppercase;
   color: #fff;
@@ -257,7 +267,7 @@ a:hover {
 .jp-hl-btn, .catbut {
   font-size: 1em;
   padding: 2px 20px;
-  font-family: Cairo Play;
+  font-family: Titillium Web;
   color: #000;
   background-color: #fff;
   z-index: 10;
@@ -353,7 +363,7 @@ a:hover {
   background-image: linear-gradient(140deg, #ffff8e, #a9d992);
   padding-top: 2em;
   justify-content: center !important;
-  font-family: Cairo Play;
+  font-family: Titillium Web;
   overflow: hidden;
 }
 
@@ -400,37 +410,37 @@ a:hover {
 }
 
 #jpg-pic1 {
-  background: linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%), url(/kanakata/images/man1.jpg) !important;
+  background: url(/kanakata/images/man1.jpg) !important;
   background-size: cover !important;
 }
 
 #jpg-pic2 {
-  background: linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%), url(/kanakata/images/kids1.jpg) !important;
+  background: url(/kanakata/images/kids1.jpg) !important;
   background-size: cover !important;
 }
 
 #jpg-pic3 {
-  background: linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%), url(/kanakata/images/woman1.gif) !important;
+  background: url(/kanakata/images/woman1.gif) !important;
   background-size: cover !important;
 }
 
 #jpg-pic4 {
-  background: linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%), url(/kanakata/images/shoes1.jpg) !important;
+  background: url(/kanakata/images/shoes1.jpg) !important;
   background-size: cover !important;
 }
 
 #jpg-pic5 {
-  background: linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%), url(/kanakata/images/hats1.jpg) !important;
+  background: url(/kanakata/images/hats1.jpg) !important;
   background-size: cover !important;
 }
 
 #jpg-pic6 {
-  background: linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%), url(/kanakata/images/watch1.jpg) !important;
+  background: url(/kanakata/images/watch1.jpg) !important;
   background-size: cover !important;
 }
 
 #jpg-pic7 {
-  background: linear-gradient(to bottom, rgba(85, 166, 48, 0.7) 0%, rgba(85, 166, 48, 0.7) 100%), url(/kanakata/images/sungl1.jpg) !important;
+  background: url(/kanakata/images/sungl1.jpg) !important;
   background-size: cover !important;
 }
 
@@ -473,9 +483,55 @@ a:hover {
   justify-content: center;
 }
 
+.greentitl {
+  z-index: 11 !important;
+}
+
+.greenol {
+  background-color: #55a630 !important;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0.5;
+}
+
+.jpg-block {
+  transform: scale(1);
+}
+
+.jpg-block:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  z-index: 20;
+  outline: 2px solid #fff;
+}
+
+.jpg-block:hover .greenol {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .carousel-control-next, .carousel-control-prev {
+  display: block;
   text-decoration: none;
   font-size: 3em;
+  top: 0 !important;
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  padding-top: 220px;
+}
+
+.carousel-control-next {
+  left: 520px;
+  text-align: left;
+}
+
+.carousel-control-prev {
+  left: -520px;
+  text-align: right;
 }
 
 .jp-slide {
@@ -516,54 +572,60 @@ a:hover {
   background: url(/kanakata/images/lapic3.jpg);
   background-size: cover;
   left: -450px;
+  border-radius: 0.5em;
 }
 
 #jpc1:not(.active.carousel-item-start)::after {
   background: url(/kanakata/images/lapic2.jpg);
   background-size: cover;
   left: 550px;
+  border-radius: 0.5em;
 }
 
 #jpc2:not(.active.carousel-item-end).active::before {
   background: url(/kanakata/images/lapic1.jpg);
   background-size: cover;
   left: -450px;
+  border-radius: 0.5em;
 }
 
 #jpc2:not(.active.carousel-item-start)::after {
   background: url(/kanakata/images/lapic3.jpg);
   background-size: cover;
   left: 550px;
+  border-radius: 0.5em;
 }
 
 #jpc3:not(.active.carousel-item-end).active::before {
   background: url(/kanakata/images/lapic2.jpg);
   background-size: cover;
   left: -450px;
+  border-radius: 0.5em;
 }
 
 #jpc3:not(.active.carousel-item-start)::after {
   background: url(/kanakata/images/lapic1.jpg);
   background-size: cover;
   left: 550px;
+  border-radius: 0.5em;
 }
 
 .carousel-item {
+  position: relative;
   opacity: 1;
+  transition-property: opacity, transform;
 }
 
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
   transform: translateX(100%) scale(0.8);
-  opacity: 0.2;
-  transition-property: opacity, transform;
+  opacity: 0.2 !important;
 }
 
 .carousel-item-prev:not(.carousel-item-end),
-.active.carousel-item-start {
+.active.carousel-item-start, .carousel-item-prev-start {
   transform: translateX(-100%) scale(0.8);
   opacity: 0.2;
-  transition-property: opacity, transform;
 }
 
 #jp-car-ofl {
@@ -572,6 +634,7 @@ a:hover {
 
 .carousel-control-next, .carousel-control-prev, .carousel-indicators {
   filter: invert(100%);
+  z-index: 20;
 }
 
 .dark .carousel-control-next, .dark .carousel-control-prev, .dark.carousel-indicators {
@@ -584,18 +647,448 @@ a:hover {
   left: 0;
   background-color: rgb(85, 166, 48);
   color: #fff;
-  width: 100px;
+  width: 300px;
   height: 40px;
-  padding: 4px 10px 8px 20px;
+  padding: 6px 10px 8px 20px;
   transition: all 0.3s ease-in-out;
   border-radius: 0 0.5em 0 0.5em;
+  text-align: left;
+  overflow: hidden;
 }
 
-.jp-car:hover .cartext, .jp-car.hover .cartext {
+.cartitle {
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+.cartext i {
+  float: right;
+  margin-top: 5px;
+}
+
+.jp-car-boxtext {
+  display: block;
+  margin: 10px 0 0 10px;
+  width: 70%;
+  opacity: 0;
+}
+
+.jp-car-boxicons {
+  display: none;
+  width: 50px;
+  background-color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 24px;
+}
+
+.biitem, .biitem i {
+  display: block !important;
+  font-size: 1.16em;
+  text-align: center;
+  color: #55a630;
+  width: 100%;
+  position: relative;
+}
+
+.biitem i {
+  width: 40px;
+  padding: 10px 0 8px 0;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.bii1 {
+  top: 25px !important;
+}
+
+.bii2 {
+  top: 74px !important;
+}
+
+.bii3 {
+  top: 121px !important;
+}
+
+.bii4 {
+  top: 175px !important;
+}
+
+.biitem i:hover {
+  color: #fff;
+  background-color: #007f5f;
+}
+
+.jp-car:hover .cartext {
   width: 100%;
   height: 100%;
   background-color: rgba(85, 166, 48, 0.7);
   border-radius: 0.5em;
+}
+
+.jp-car:hover .jp-car-boxicons {
+  display: inline;
+}
+
+.jp-car:hover .cartext i {
+  display: none;
+}
+
+.jp-car:hover .cartitle {
+  display: block;
+  margin-top: 180px;
+  font-size: 1.6em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.jp-car:hover .jp-car-boxtext {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  transition-delay: 0.2s;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carsizes, .cardisc, .carprice {
+  font-family: Roboto;
+  display: block;
+  margin: 10px 0 10px 0;
+}
+
+.cardisc, .carprice {
+  font-family: "ODYWSS";
+  color: #000;
+  text-shadow: none;
+}
+
+.cardisc::before {
+  content: url("/kanakata/images/pglabel.svg");
+  display: block;
+  width: 120px !important;
+  margin-bottom: -40px;
+  margin-left: -17px;
+  z-index: 7 !important;
+}
+
+.cardisc {
+  font-size: 1.7em;
+  margin: 10px 0 0 0;
+  position: relative;
+  top: -10px;
+  line-height: 0.5em;
+  color: #9fcb8b;
+  transform: rotate(-10deg);
+  z-index: 8 !important;
+}
+
+.cardisc::after {
+  content: url("/kanakata/images/pglabelst.svg");
+  display: block;
+  width: 120px !important;
+  margin-top: -40px;
+  margin-left: 0px;
+  z-index: 7 !important;
+}
+
+.carprice::before {
+  content: url("/kanakata/images/pglabel.svg");
+  display: block;
+  width: 158px !important;
+  margin-bottom: -85px;
+  margin-left: -24px;
+  z-index: 29 !important;
+}
+
+.carprice {
+  font-size: 2.3em;
+  position: relative;
+  margin: 15px 0 10px 20px !important;
+  z-index: 30 !important;
+  transform: rotate(1deg);
+}
+
+.circnew {
+  display: block !important;
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  top: 20px;
+  left: 20px;
+  border-radius: 35px;
+  text-align: center;
+  color: #fff;
+  background-color: #007f5f;
+  z-index: 20 !important;
+}
+
+.circnew span {
+  display: block;
+  margin: 0.8em 0 0 0;
+  font-size: 1.4em;
+  transform: rotate(-20deg);
+}
+
+.maformsinp {
+  padding: 10px;
+  border-radius: 0.5em;
+  margin-bottom: 10px;
+  border: #9fcb8b 1px solid;
+}
+
+.maformsfw {
+  display: block;
+  width: 100%;
+}
+
+.maforms span {
+  text-transform: uppercase;
+  font-family: Titillium Web;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+  border-bottom: #55a630 1px solid;
+}
+
+.maforms {
+  display: block;
+  padding: 20px;
+  background-image: linear-gradient(170deg, #fff, #ffff8e);
+  border-radius: 1em;
+  height: 100%;
+}
+
+.maforms .btn {
+  background-color: #007f5f;
+  color: #fff;
+}
+
+.maforms label {
+  display: inline;
+}
+
+.recaplbl {
+  display: block !important;
+  border: rgba(85, 166, 48, 0.2) 1px solid;
+}
+
+.maforms p {
+  float: right;
+  padding-top: 10px;
+}
+
+.valicen {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin-right: 6px;
+  vertical-align: bottom;
+  position: relative;
+  top: -4px;
+}
+
+.valilbl {
+  float: left;
+  display: block;
+  padding: 10px 0 0 15px;
+  text-indent: -15px;
+}
+
+.orlogin {
+  display: block;
+  clear: both;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.orlogin:before,
+.orlogin:after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.orlogin:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.orlogin:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.externlogin {
+  display: block;
+  width: 40%;
+  background-color: #4C69BA;
+  padding: 4px 10px;
+  text-align: center;
+  float: left;
+  margin: 16px 0 25px 0;
+  color: #fff;
+}
+
+.externlogin i {
+  float: left;
+  padding: 2px 0 0 2px;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.externlogin img {
+  height: 1.5em;
+  float: left;
+  background-color: #fff;
+  padding: 2px;
+}
+
+.recaplbl {
+  margin: 0 auto;
+  width: 50%;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.recaplbl img {
+  height: 60px;
+  width: auto;
+  padding: 5px;
+}
+
+.recaplbl input {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: -21px;
+}
+
+#maforminfo {
+  border: none;
+  font-size: 0.8em !important;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+}
+
+#error1, #error2, #error3, #error4, #error5 {
+  background-color: red;
+  color: #ffffff;
+  padding: 1px 10px 0 10px;
+  font-size: 0.7em;
+  position: relative;
+  float: left;
+  top: -1em;
+  left: 1em;
+  margin-right: -100%;
+  display: none;
+}
+
+#valid1, #valid2, #valid3, #valid4, #valid5 {
+  color: #03bf03;
+  position: relative;
+  float: right;
+  font-size: 2em;
+  margin-bottom: -2em;
+  margin-right: 10px;
+  top: 1em;
+  display: none;
+}
+
+.jp-logo {
+  position: relative;
+  width: 230px;
+  height: auto;
+  margin-top: -20px;
+  z-index: 20;
+}
+
+.cdimg {
+  display: inline;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  z-index: 10 !important;
+}
+
+.cdown {
+  font-family: Roboto;
+  display: inline;
+  position: relative;
+  top: 10px;
+  left: 30px;
+  z-index: 20 !important;
+  color: #fff !important;
+  font-size: 3em;
+  margin-bottom: -3em;
+  margin-left: -2.3em;
+}
+
+.cdtext {
+  position: relative;
+  display: inline-block;
+  z-index: 18;
+  top: 24px;
+  left: -50px;
+  width: 100px !important;
+  color: #ffff80;
+  font-size: 0.7em;
+  margin: auto;
+}
+
+.jp-footer {
+  padding: 20px 0 20px 0;
+  position: relative;
+}
+
+.jp-footer::after {
+  position: absolute;
+  content: "";
+  border-top: 1px solid #000;
+  -o-border-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) 1;
+     border-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.jp-footer li {
+  list-style: none;
+}
+
+.jpg-fw::after {
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid #000;
+  -o-border-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) 1;
+     border-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)) 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.jpg-fw::before {
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid #fff;
+  -o-border-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+     border-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  width: 100%;
+  top: 1px;
+  left: 0;
+}
+
+.footimg {
+  height: 50px;
+  width: auto;
+  padding: 0 0 3px 30px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -751,43 +1244,43 @@ a:hover {
 
 .dark #jpg-pic1 {
   border: #007f5f solid 1px;
-  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/man1.jpg) !important;
+  background: url(/kanakata/images/man1.jpg) !important;
   background-size: cover !important;
 }
 
 .dark #jpg-pic2 {
   border: #007f5f solid 1px;
-  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/kids1.jpg) !important;
+  background: url(/kanakata/images/kids1.jpg) !important;
   background-size: cover !important;
 }
 
 .dark #jpg-pic3 {
   border: #007f5f solid 1px;
-  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/woman1.gif) !important;
+  background: url(/kanakata/images/woman1.gif) !important;
   background-size: cover !important;
 }
 
 .dark #jpg-pic4 {
   border: #007f5f solid 1px;
-  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/shoes1.jpg) !important;
+  background: url(/kanakata/images/shoes1.jpg) !important;
   background-size: cover !important;
 }
 
 .dark #jpg-pic5 {
   border: #007f5f solid 1px;
-  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/hats1.jpg) !important;
+  background: url(/kanakata/images/hats1.jpg) !important;
   background-size: cover !important;
 }
 
 .dark #jpg-pic6 {
   border: #007f5f solid 1px;
-  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/watch1.jpg) !important;
+  background: url(/kanakata/images/watch1.jpg) !important;
   background-size: cover !important;
 }
 
 .dark #jpg-pic7 {
   border: #007f5f solid 1px;
-  background: linear-gradient(to bottom, rgba(15, 40, 0, 0.7) 0%, rgba(15, 40, 0, 0.7) 100%), url(/kanakata/images/sungl1.jpg) !important;
+  background: url(/kanakata/images/sungl1.jpg) !important;
   background-size: cover !important;
 }
 
